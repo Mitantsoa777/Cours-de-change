@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<head>
+    <title>Exchange rate</title>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="439091.png" type="image/x-icon">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="main-card">
+        <div class="money-1">
+            <label for="type">Monnaie à echanger :</label>
+            <select id="type-1" name="type">
+                <option value="Euro">Euro</option>
+                <option value="Dollar">Dollar</option>
+                <option value="Livre">Livre</option>
+                <option value="Roupie">Roupie</option>
+                <option value="Yen">Yen</option>
+                <option value="Ariary">Ariary</option>
+            </select>
+            <input type="text" placeholder="Montant..." id="montant-1">
+        </div>
+        <div class="money-1">
+            <label for="type">Monnaie echangé :</label>
+            <select id="type-2" name="type">
+                <option value="Dollar">Dollar</option>
+                <option value="Euro">Euro</option>
+                <option value="Livre">Livre</option>
+                <option value="Roupie">Roupie</option>
+                <option value="Yen">Yen</option>
+                <option value="Ariary">Ariary</option>
+            </select><br>
+            <input type="text" placeholder="Montant..." readonly id="montant-2">
+        </div><br>
+        <button id="Button" onclick="getValues()">Convertir</button>
+    </div>
+
+    <script>
+        function getValues() {
+            const monnaie_1 = document.getElementById("type-1").value;
+            const montant_1 = document.getElementById("montant-1").value;
+            const monnaie_2 = document.getElementById("type-2").value;
+            const montant_2 = document.getElementById("montant-2").value;
+            if (montant_1.trim() === "" || isNaN(montant_1)) {
+                alert("Entrer un chiffre et éviter les espaces!");
+            }
+            
+            if (monnaie_1 === "Euro" && monnaie_2 === "Dollar") {
+                let resultat = montant_1 * 1.15;
+                document.getElementById("montant-2").value = resultat.toFixed(2);
+            } else if (monnaie_1 === "Euro" && monnaie_2 === "Livre") {
+                let resultat = montant_1 * 0.85;
+                document.getElementById("montant-2").value = resultat.toFixed(2);
+            } else if (monnaie_1 === "Euro" && monnaie_2 === "Roupie") {
+                let resultat = montant_1 * 93.23;
+                document.getElementById("montant-2").value = resultat.toFixed(2);
+            } else if (monnaie_1 === "Euro" && monnaie_2 === "Yen") {
+                let resultat = montant_1 * 166.19;
+                document.getElementById("montant-2").value = resultat.toFixed(2);
+            } else if (monnaie_1 === "Euro" && monnaie_2 === "Ariary") {
+                let resultat = montant_1 * 5180;
+                document.getElementById("montant-2").value = resultat.toFixed(2);
+            } else if (monnaie_1 === "Dollar" && monnaie_2 === "Euro") {
+                let resultat = montant_1 * 0.87;
+                document.getElementById("montant-2").value = resultat.toFixed(2);
+            } else if (monnaie_1 === "Dollar" && monnaie_2 === "Livre") {
+                let resultat = montant_1 * 0.74;
+                document.getElementById("montant-2").value = resultat.toFixed(2);
+            } else if (monnaie_1 === "Dollar" && monnaie_2 === "Roupie") {
+                let resultat = montant_1 * 85.43;
+                document.getElementById("montant-2").value = resultat.toFixed(2);
+            } else if (monnaie_1 === "Dollar" && monnaie_2 === "Yen") {
+                let resultat = montant_1 * 144.6;
+                document.getElementById("montant-2").value = resultat.toFixed(2);
+            } else if (monnaie_1 === "Dollar" && monnaie_2 === "Ariary") {
+                let resultat = montant_1 * 4530.07;
+                document.getElementById("montant-2").value = resultat.toFixed(2);
+            } else if (monnaie_1 === "Livre" && monnaie_2 === "Euro") {
+                let resultat = montant_1 * 1.18;
+                document.getElementById("montant-2").value = resultat.toFixed(2);
+            } else if (monnaie_1 === "Livre" && monnaie_2 === "Dollar") {
+                let resultat = montant_1 * 1.35;
+                document.getElementById("montant-2").value = resultat.toFixed(2);
+            } else if (monnaie_1 === "Livre" && monnaie_2 === "Roupie") {
+                let resultat = montant_1 * 115.76;
+                document.getElementById("montant-2").value = resultat.toFixed(2);
+            } else if (monnaie_1 === "Livre" && monnaie_2 === "Yen") {
+                let resultat = montant_1 * 195.95;
+                document.getElementById("montant-2").value = resultat.toFixed(2);
+            } else if (monnaie_1 === "Livre" && monnaie_2 === "Ariary") {
+                let resultat = montant_1 * 6112.17;
+                document.getElementById("montant-2").value = resultat.toFixed(2);
+            } else if (monnaie_1 === "Roupie" && monnaie_2 === "Euro") {
+                let resultat = montant_1 * 0.010;
+                document.getElementById("montant-2").value = resultat.toFixed(2);
+            } else if (monnaie_1 === "Roupie" && monnaie_2 === "Dollar") {
+                let resultat = montant_1 * 0.012;
+                document.getElementById("montant-2").value = resultat.toFixed(2);
+            } else if (monnaie_1 === "Roupie" && monnaie_2 === "Livre") {
+                let resultat = montant_1 * 0.0086;
+                document.getElementById("montant-2").value = resultat.toFixed(2);
+            } else if (monnaie_1 === "Roupie" && monnaie_2 === "Yen") {
+                let resultat = montant_1 * 1.69;
+                document.getElementById("montant-2").value = resultat.toFixed(2);
+            } else if (monnaie_1 === "Roupie" && monnaie_2 === "Ariary") {
+                let resultat = montant_1 * 53.02;
+                document.getElementById("montant-2").value = resultat.toFixed(2);
+            } else if (monnaie_1 === "Yen" && monnaie_2 === "Euro") {
+                let resultat = montant_1 * 0.006;
+                document.getElementById("montant-2").value = resultat.toFixed(2);
+            } else if (monnaie_1 === "Yen" && monnaie_2 === "Dollar") {
+                let resultat = montant_1 * 0.0069;
+                document.getElementById("montant-2").value = resultat.toFixed(2);
+            } else if (monnaie_1 === "Yen" && monnaie_2 === "Livre") {
+                let resultat = montant_1 * 0.0051;
+                document.getElementById("montant-2").value = resultat.toFixed(2);
+            } else if (monnaie_1 === "Yen" && monnaie_2 === "Roupie") {
+                let resultat = montant_1 * 0.59;
+                document.getElementById("montant-2").value = resultat.toFixed(2);
+            } else if (monnaie_1 === "Yen" && monnaie_2 === "Ariary") {
+                let resultat = montant_1 * 31.34;
+                document.getElementById("montant-2").value = resultat.toFixed(2);
+            } else if (monnaie_1 === "Ariary" && monnaie_2 === "Euro") {
+                let resultat = montant_1 * 0.00019;
+                document.getElementById("montant-2").value = resultat.toFixed(2);
+            } else if (monnaie_1 === "Ariary" && monnaie_2 === "Dollar") {
+                let resultat = montant_1 * 0.00022;
+                document.getElementById("montant-2").value = resultat.toFixed(2);
+            } else if (monnaie_1 === "Ariary" && monnaie_2 === "Livre") {
+                let resultat = montant_1 * 0.00016;
+                document.getElementById("montant-2").value = resultat.toFixed(2);
+            } else if (monnaie_1 === "Ariary" && monnaie_2 === "Roupie") {
+                let resultat = montant_1 * 0.019;
+                document.getElementById("montant-2").value = resultat.toFixed(2);
+            } else if (monnaie_1 === "Ariary" && monnaie_2 === "Yen") {
+                let resultat = montant_1 * 0.032;
+                document.getElementById("montant-2").value = resultat.toFixed(2);
+            }
+            else if (monnaie_1 === monnaie_2){
+                alert("Conversion impossible, monnaie(s) identique(s)");
+            }
+        }
+        
+    </script>
+</body>
