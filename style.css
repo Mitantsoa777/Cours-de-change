@@ -1,4 +1,3 @@
-
 body {
     display: flex;
     justify-content: center;
@@ -10,15 +9,15 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
+/* Carte principale avec taille agrandie */
 .main-card {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 90%;
-    max-width: 400px;
-    padding: 2rem;
+    width: 95%;
+    max-width: 480px;
+    padding: 2.5rem;
     border-radius: 25px;
     background-color: rgba(0, 0, 0, 0.6);
     color: #FFFFFF;
@@ -26,34 +25,35 @@ body {
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
 }
 
-
+/* Champs de formulaire */
 input,
 select {
     width: 100%;
-    padding: 0.6em;
-    margin: 0.5em 0;
+    padding: 0.8em;
+    margin: 0.8em 0;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.1em;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 1em;
 }
 
-
+/* Conteneur des champs */
 .money-1 {
     width: 100%;
     padding-top: 1em;
 }
 
-
+/* Bouton stylisé et plus grand */
 #Button {
     margin-top: 1em;
     width: 100%;
-    padding: 0.6em;
+    padding: 0.9em;
+    font-size: 1.1em;
     background-color: #444;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     transition: 0.3s ease;
     font-weight: bold;
     cursor: pointer;
@@ -63,16 +63,17 @@ select {
     background-color: rgb(126, 125, 125);
 }
 
-/* Responsive pour petits écrans */
+/* Responsive : un peu plus grand pour mobile */
 @media (max-width: 480px) {
     .main-card {
         width: 95%;
-        padding: 1.5rem;
+        padding: 2rem;
     }
 
     input,
     select,
     #Button {
-        font-size: 0.9em;
+        font-size: 1.1em;
+        padding: 1em;
     }
 }
